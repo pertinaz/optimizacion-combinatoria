@@ -1,5 +1,4 @@
 
-# RESPUESTA 
 ### ORGANIZACION DE VUELOS
 1. Representación del problema
 
@@ -37,8 +36,6 @@
 *Salida*: Horario óptimo que maximiza la ganancia cumpliendo restricciones.
 
 *Complejidad*: Depende del número de vuelos y restricciones, pero se mitiga con poda y heurística.
-
-# RESPUESTA
 
 ### ESTACIONES DE BOMBEROS
 1. Representación del problema
