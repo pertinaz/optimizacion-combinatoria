@@ -34,6 +34,63 @@ Entrada: Lista de vuelos disponibles (compañía, destino, ganancia).
 
 Salida: Horario óptimo que maximiza la ganancia cumpliendo restricciones.
 
+
+# RESPUESTA
+
+### ESTACIONES DE BOMBEROS
+1. Representación del problema
+    - Estado: Una cuadrícula N×MN×M donde cada celda contiene:
+
+        - Número de estaciones de bomberos.
+        - Número de camiones asignados.
+
+    - Restricciones:
+
+        - No exceder PP estaciones de bomberos.
+        - Asignar exactamente CC camiones.
+        - Respetar el rango de 1 a 3 camiones por estación.
+
+    - Función de costo: 
+        - Penalizar la cantidad de camiones y estaciones usadas para minimizar costos.
+
+    - Función heurística: 
+        - Aproximar la mejora en el factor de seguridad con los camiones restantes.
+
+2. Diseño del algoritmo
+    - Estado inicial: 
+        - Cuadrícula vacía sin estaciones ni camiones asignados.
+
+    - Espacio de estados:
+
+        -  Asignar estaciones de bomberos y camiones progresivamente.
+
+    - Operadores válidos:
+
+        -  Colocar una estación en una celda.
+        - Asignar 1, 2 o 3 camiones si la celda tiene una estación.
+
+    - Función heurística:
+
+        - Calcular el potencial incremento en el factor de seguridad basado en las celdas restantes.
+
+    - Criterio de finalización:
+
+        - Todas las estaciones (PP) y camiones (CC) han sido asignados.
+
+#### Ventajas del enfoque
+
+    *Restricciones respetadas*: Las restricciones son verificadas en cada paso.
+
+    *Óptimo global*: A* asegura la solución con el mayor factor de seguridad.
+
+    *Escalabilidad*: Puede adaptarse a cuadrículas más grandes y restricciones adicionales.
+
+#### Limitaciones
+
+    *Complejidad computacional*: Puede ser costoso si N×MN×M es grande.
+
+    *Dependencia de la heurística:* Una mala heurística puede ralentizar la solución.
+
 Complejidad: Depende del número de vuelos y restricciones, pero se mitiga con poda y heurística.
 
 ### ESTACIONES DE BOMBEROS
