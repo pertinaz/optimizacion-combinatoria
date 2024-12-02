@@ -92,6 +92,3 @@
     *Dependencia de la heurística:* Una mala heurística puede ralentizar la solución.
 
 Complejidad: Depende del número de vuelos y restricciones, pero se mitiga con poda y heurística.
-
-### ESTACIONES DE BOMBEROS
-
